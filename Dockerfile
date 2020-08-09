@@ -2,11 +2,12 @@ FROM ubuntu:bionic
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy sudo \
+        vim less bc feh \
         tigervnc-standalone-server \
         fluxbox rxvt-unicode x11-xserver-utils \
         chromium-browser && \
     apt-get clean && \
-	rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
+    rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
 
 RUN useradd -m -s /bin/bash user && \
     echo "user ALL = NOPASSWD: ALL" > /etc/sudoers.d/user
