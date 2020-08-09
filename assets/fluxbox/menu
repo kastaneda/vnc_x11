@@ -1,0 +1,15 @@
+[begin] (Fluxbox)
+    [exec] (Chromium) { chromium-browser --no-sandbox }
+    [exec] (Terminal) { urxvt -e bash }
+    [nop] ()
+
+    [config] (Configuration...)
+    [submenu] (Styles...) {}
+        [stylesdir] (/usr/share/fluxbox/styles)
+        [stylesdir] (~/.fluxbox/styles)
+    [end]
+    [reconfig] (reconfigure)
+    [nop] ()
+
+    [exit] (Exit Fluxbox)
+[end]

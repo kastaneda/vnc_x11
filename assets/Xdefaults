@@ -1,0 +1,23 @@
+Xcursor.theme:          core
+Xcursor.size:           16
+
+URxvt*geometry:         80x25
+URxvt*background:       #000000
+URxvt*foreground:       gray
+URxvt*skipScroll:       true
+URxvt*font:             -*-terminus-medium-r-*-*-20-*-*-*-*-*-iso10646-*
+URxvt*scrollBar:        false
+URxvt*internalBorder:   0
+URxvt*transparent:      false
+URxvt*cursorUnderline:  false
+URxvt*cursorBlink:      false
+URxvt*hold:             false
+URxvt*cursorColor:      #9fff9f
+URxvt*color0:           #131813
+URxvt*color1:           #ff6699
+URxvt*color2:           #66ff99
+URxvt*color3:           #ffff66
+URxvt*color4:           #3300ff
+URxvt*color5:           #9999ff
+URxvt*color6:           #0099ff
+URxvt*color7:           #ffffff
