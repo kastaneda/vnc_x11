@@ -2,7 +2,7 @@ FROM debian:stable
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy sudo \
-        vim less bc feh wget \
+        vim less bc feh wget x11-utils \
         tigervnc-standalone-server \
         fluxbox rxvt-unicode x11-xserver-utils \
         firefox-esr && \
