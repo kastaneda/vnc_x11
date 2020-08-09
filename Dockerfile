@@ -1,11 +1,11 @@
-FROM ubuntu:bionic
+FROM debian:stable
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy sudo \
-        vim less bc feh \
+        vim less bc feh wget \
         tigervnc-standalone-server \
         fluxbox rxvt-unicode x11-xserver-utils \
-        chromium-browser && \
+        firefox-esr && \
     apt-get clean && \
     rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
 
@@ -14,6 +14,7 @@ RUN useradd -m -s /bin/bash user && \
 
 ADD assets/startup /home/user/.startup
 ADD assets/Xdefaults /home/user/.Xdefaults
+ADD assets/fluxbox/init /home/user/.fluxbox/init
 ADD assets/fluxbox/menu /home/user/.fluxbox/menu
 RUN chown user:user -R ~user
 

@@ -1,6 +1,6 @@
 [begin] (Fluxbox)
-    [exec] (Chromium) { chromium-browser --no-sandbox }
-    [exec] (Terminal) { urxvt -e bash }
+    [exec] (Firefox) { firefox }
+    [exec] (Terminal) { urxvt }
     [nop] ()
 
     [config] (Configuration...)
