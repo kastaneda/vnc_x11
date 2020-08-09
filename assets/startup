@@ -3,8 +3,10 @@
 Xtigervnc :0 -geometry 1280x720 -depth 24 -rfbport 5900 -SecurityTypes None &
 VNCPID=$!
 
-DISPLAY=:0 xrdb -load ~/.Xdefaults
-DISPLAY=:0 startfluxbox &
+export DISPLAY=:0
+export SHELL=/bin/bash
+xrdb -load ~/.Xdefaults
+dbus-run-session -- startfluxbox &
 FLUXBOXPID=$!
 
 wait $FLUXBOXPID
