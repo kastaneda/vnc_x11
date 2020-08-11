@@ -11,7 +11,8 @@ FLUXBOXPID=$!
 
 sleep 1
 echo
-echo "=== Press Ctrl-C to exit ==="
+echo " * To connect there, run: vncviewer 127.0.0.1"
+echo " * Press Ctrl-C to stop container"
 tail --pid=$FLUXBOXPID -f /dev/null
 
 kill $VNCPID
