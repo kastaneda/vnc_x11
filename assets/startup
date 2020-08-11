@@ -9,6 +9,9 @@ xrdb -load ~/.Xdefaults
 dbus-run-session -- startfluxbox &
 FLUXBOXPID=$!
 
-wait $FLUXBOXPID
+sleep 1
+echo
+echo "=== Press Ctrl-C to exit ==="
+tail --pid=$FLUXBOXPID -f /dev/null
 
 kill $VNCPID
