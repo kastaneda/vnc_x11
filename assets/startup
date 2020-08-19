@@ -1,6 +1,8 @@
 #!/bin/bash
 
-Xtigervnc :0 -geometry 1280x720 -depth 24 -rfbport 5900 -SecurityTypes None &
+if [ z$SCREEN_SIZE = z ]; then SCREEN_SIZE=1280x720; fi
+
+Xtigervnc :0 -geometry $SCREEN_SIZE -depth 24 -rfbport 5900 -SecurityTypes None &
 VNCPID=$!
 
 export DISPLAY=:0
