@@ -1,6 +1,6 @@
 FROM debian:stable
 
-RUN apt-get update && \
+RUN apt-get -q update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy sudo \
         vim less bc feh wget x11-utils \
         tigervnc-standalone-server \
