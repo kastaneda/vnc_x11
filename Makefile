@@ -1,7 +1,13 @@
+
+# Include optional config
+# Sample usage: echo "SCREEN_SIZE=1024x768" >> .env
+
+-include .env
+
 PWD := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 run: build data
-	docker run -it --rm -p5900:5900 -v $(PWD)/data:/home/user/data kastaneda/vnc_x11
+	docker run -it --rm -p5900:5900 $(DOCKER_OPTIONS) -v $(PWD)/data:/home/user/data kastaneda/vnc_x11
 
 build:
 	docker build -t kastaneda/vnc_x11 ./
