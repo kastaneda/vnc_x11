@@ -14,8 +14,7 @@ RUN useradd -m -s /bin/bash user && \
 
 ADD assets/startup /home/user/.startup
 ADD assets/Xdefaults /home/user/.Xdefaults
-ADD assets/fluxbox/init /home/user/.fluxbox/init
-ADD assets/fluxbox/menu /home/user/.fluxbox/menu
+ADD assets/fluxbox/ /home/user/.fluxbox/
 RUN chown user:user -R ~user
 
 USER user
