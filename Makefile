@@ -1,6 +1,6 @@
 
 # Include optional config
-# Sample usage: echo "DOCKER_OPTIONS=-e SCREEN_SIZE=1024x768" >> .env
+# Sample usage: echo "DOCKER_OPTIONS=-e SCREEN_SIZE=1024x768 -e KIOSK=..." >> .env
 
 -include .env
 
