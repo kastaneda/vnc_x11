@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ z$SCREEN_SIZE = z ]; then SCREEN_SIZE=1280x720; fi
+if [ -z "$SCREEN_SIZE" ]; then SCREEN_SIZE=1280x720; fi
 
 Xtigervnc :0 -geometry $SCREEN_SIZE -depth 24 -rfbport 5900 -SecurityTypes None &
 VNCPID=$!
