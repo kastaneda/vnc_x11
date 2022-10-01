@@ -7,7 +7,7 @@
 PWD := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 run: build data
-	docker run -it --rm -p5900:5900 $(DOCKER_OPTIONS) -v $(PWD)/data:/home/user/data kastaneda/vnc_x11
+	docker run -it --rm -p5900:5900 $(DOCKER_OPTIONS) -v $(PWD)/data:/home/user/data kastaneda/vnc_x11 -v /dev/shm:/dev/shm
 
 build:
 	docker build -t kastaneda/vnc_x11 ./
