@@ -1,7 +1,7 @@
 # If variable KIOSK is defined, run Firefox in Kiosk mode
 if [ ! -z "$KIOSK" ]
 then
-  firefox --kiosk "$KIOSK" &
+  (sleep 1; firefox --kiosk "$KIOSK") &
 fi
 
 exec fluxbox
