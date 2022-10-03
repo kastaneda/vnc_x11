@@ -7,7 +7,7 @@
 # Variable SCREEN_SIZE sets the X11 display geometry
 # Variable KIOSK is used to run Firefox in Kiosk mode
 #
-# "--shm-size 2g" will increase shared memory to 2 Gb (recommended)
+# "--shm-size=2g" will increase shared memory to 2 Gb (recommended)
 # "-v /dev/shm" will use shared memory of the host, use with caution!
 
 -include .env
