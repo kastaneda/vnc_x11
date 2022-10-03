@@ -7,11 +7,11 @@ VNCPID=$!
 
 export DISPLAY=:0
 export SHELL=/bin/bash
+sleep 1
 xrdb -load ~/.Xdefaults
 dbus-run-session -- startfluxbox &
 FLUXBOXPID=$!
 
-sleep 1
 echo
 echo " * To connect there, run: vncviewer 127.0.0.1"
 echo " * Press Ctrl-C to stop container"
